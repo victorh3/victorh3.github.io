@@ -65,18 +65,26 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.marketing .col-lg-12 {
   margin-bottom: 20px;
   text-align: center;
 }
 .marketing h2 {
   font-weight: normal;
 }
-.marketing .col-lg-4 p {
+.marketing .col-md-6 p {
   margin-right: 10px;
   margin-left: 10px;
+  text-align: center;
 }
-
+.marketing h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.marketing .col-lg-6 {
+  text-align: center;
+}
 
 /* Featurettes
 ------------------------- */
