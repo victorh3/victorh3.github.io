@@ -43,11 +43,11 @@ const Header = ({ data }) => {
               Resume
             </a>
           </li>
-          <li>
+          {/* <li>
             <a className="smoothscroll" href="#portfolio">
               Portfolio
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
 
