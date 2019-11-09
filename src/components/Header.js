@@ -1,21 +1,19 @@
 import React from 'react';
 
 const Header = ({ data }) => {
-  if (data) {
-    var name = data.name;
-    var occupation = data.occupation;
-    var description = data.description;
-    var city = data.address.city;
-    var networks = data.social.map(network => {
-      return (
-        <li key={network.name}>
-          <a href={network.url}>
-            <i className={network.className}></i>
-          </a>
-        </li>
-      );
-    });
-  }
+  const name = data.name;
+  const occupation = data.occupation;
+  const description = data.description;
+  const city = data.address.city;
+  const networks = data.social.map(network => {
+    return (
+      <li key={network.name}>
+        <a href={network.url}>
+          <i className={network.className}></i>
+        </a>
+      </li>
+    );
+  });
 
   return (
     <header id="home">
