@@ -4,4 +4,13 @@ $color-white: #ffffff;
 $color-gray: #d0d0d0;
 $color-black: #000000;
 
-@import '~bootstrap/scss/bootstrap.scss';
+header {
+  background: #161415 url(./assets/hero.png) no-repeat top center;
+}
+
+.Resume-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
