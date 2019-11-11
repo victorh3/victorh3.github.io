@@ -213,6 +213,9 @@ ul#nav li.current a {
    color: #0BD3D3;
 }
 
+ul#nav li a:hover {
+   color: #F890E7;
+}
 
 /* ------------------------------------------------------------------ */
 /* c. About Section
@@ -1230,8 +1233,4 @@ footer .social-links li:first-child {
    font-size: 21px;
    line-height: 60px;
    border-radius: 100%;
-}
-
-#go-top a:hover {
-   background-color: #F890E7;
 }
