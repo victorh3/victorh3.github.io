@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/victorh3.github.io/static/css/main.073c9b0a.css",
-    "main.js": "/victorh3.github.io/static/js/main.a6f89771.js",
-    "static/js/787.5fbbaff1.chunk.js": "/victorh3.github.io/static/js/787.5fbbaff1.chunk.js",
-    "static/media/logo.svg": "/victorh3.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/victorh3.github.io/index.html",
-    "main.073c9b0a.css.map": "/victorh3.github.io/static/css/main.073c9b0a.css.map",
-    "main.a6f89771.js.map": "/victorh3.github.io/static/js/main.a6f89771.js.map",
-    "787.5fbbaff1.chunk.js.map": "/victorh3.github.io/static/js/787.5fbbaff1.chunk.js.map"
+    "main.css": "/static/css/main.073c9b0a.css",
+    "main.js": "/static/js/main.13f65fb1.js",
+    "static/js/787.5fbbaff1.chunk.js": "/static/js/787.5fbbaff1.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
+    "main.13f65fb1.js.map": "/static/js/main.13f65fb1.js.map",
+    "787.5fbbaff1.chunk.js.map": "/static/js/787.5fbbaff1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.a6f89771.js"
+    "static/js/main.13f65fb1.js"
   ]
 }
