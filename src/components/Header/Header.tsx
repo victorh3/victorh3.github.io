@@ -24,9 +24,9 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["Home"];
 
-export default function DrawerAppBar(props: Props) {
+export default function Header(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -37,7 +37,7 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        V
+        @victorh3
       </Typography>
       <Divider />
       <List>
@@ -60,7 +60,7 @@ export default function DrawerAppBar(props: Props) {
       <AppBar component="nav" sx={{ bgcolor: "secondary.main" }}>
         <Toolbar sx={{ justifyContent: "flex-end" }}>
           <IconButton
-            color="inherit"
+            color={"primary"}
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
@@ -72,7 +72,6 @@ export default function DrawerAppBar(props: Props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button
               aria-label="upload picture"
-              // component="label"
               target="_blank"
               rel="noopener noreferrer"
               href={"https://www.linkedin.com/in/victor-hu-sam-64690493"}
@@ -81,7 +80,6 @@ export default function DrawerAppBar(props: Props) {
             </Button>
             <Button
               aria-label="upload picture"
-              // component="label"
               target="_blank"
               rel="noopener noreferrer"
               href={"https://github.com/victorh3"}
