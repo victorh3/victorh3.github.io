@@ -57,8 +57,8 @@ export default function DrawerAppBar(props: Props) {
 
   return (
     <>
-      <AppBar component="nav">
-        <Toolbar>
+      <AppBar component="nav" sx={{ bgcolor: "secondary.main" }}>
+        <Toolbar sx={{ justifyContent: "flex-end" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -68,30 +68,26 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-            Victor
-          </Typography>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <IconButton
-              color="secondary"
+            <Button
               aria-label="upload picture"
-              component="label"
+              // component="label"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={"https://www.linkedin.com/in/victor-hu-sam-64690493"}
             >
-              <input hidden accept="image/*" type="file" />
               <LinkedInIcon />
-            </IconButton>
-            <IconButton
-              color="secondary"
+            </Button>
+            <Button
               aria-label="upload picture"
-              component="label"
+              // component="label"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={"https://github.com/victorh3"}
             >
-              <input hidden accept="image/*" type="file" />
               <GitHubIcon />
-            </IconButton>
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
