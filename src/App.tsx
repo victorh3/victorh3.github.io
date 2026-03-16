@@ -1,121 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from "react";
+import { motion } from "motion/react";
+import { Github, Mail, Sun, Moon } from "lucide-react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import ProjectCard, { type Project } from "./ProjectCard";
+
+const projects: Project[] = [
+  {
+    title: "Project One",
+    description: "A high-performance web app for XYZ Client.",
+    tags: ["React", "Node.js", "AWS"],
+  },
+  {
+    title: "Project Two",
+    description: "Scalable SaaS architecture with real-time data.",
+    tags: ["TypeScript", "Tailwind", "Firebase"],
+  },
+  {
+    title: "Project Three",
+    description: "E-commerce engine with optimized CI/CD.",
+    tags: ["Next.js", "Shopify", "CI/CD"],
+  },
+];
+
+export default function Portfolio() {
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className={`${isDarkMode ? "dark" : ""}`}>
+      <main className="min-h-screen transition-colors duration-500 bg-slate-50 dark:bg-[#0F172A] text-slate-900 dark:text-white font-sans selection:bg-cyan-400 selection:text-slate-900">
+        {/* Navigation */}
+        <nav className="fixed top-0 w-full z-50 flex justify-between items-center p-8 backdrop-blur-md">
+          <span className="text-lg font-bold tracking-tighter uppercase">
+            victorh3
+          </span>
+          <div className="flex gap-6 items-center">
+            <button
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className="hover:text-cyan-400 transition-colors"
+            >
+              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            <Github
+              size={20}
+              className="hover:text-pink-500 cursor-pointer transition-colors"
+            />
+            <Mail
+              size={20}
+              className="hover:text-cyan-400 cursor-pointer transition-colors"
+            />
+          </div>
+        </nav>
 
-      <div className="ticks"></div>
+        {/* Hero Section */}
+        <section className="h-screen flex flex-col justify-center items-center px-4 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-gradient-to-r from-cyan-400 to-pink-500 bg-clip-text text-transparent"
+          >
+            BUILDING DIGITAL <br /> EXPERIENCES.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-2xl"
+          >
+            Software Developer focused on high-performance web solutions and
+            clean, scalable code.
+          </motion.p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-10 px-8 py-3 rounded-full border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all"
+          >
+            View Projects
+          </motion.button>
+        </section>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        {/* Project Grid */}
+        <section className="max-w-6xl mx-auto px-8 pb-32">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {projects.map((project, i) => (
+              <ProjectCard key={i} {...project} />
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
 }
-
-export default App
