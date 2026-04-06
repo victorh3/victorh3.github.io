@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Github, Mail, Sun, Moon } from "lucide-react";
+import { Github, Linkedin, Sun, Moon } from "lucide-react";
 
 import ProjectCard, { type Project } from "./ProjectCard";
 
@@ -40,14 +40,26 @@ export default function Portfolio() {
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <Github
-              size={20}
-              className="hover:text-pink-500 cursor-pointer transition-colors"
-            />
-            <Mail
-              size={20}
-              className="hover:text-cyan-400 cursor-pointer transition-colors"
-            />
+            <a
+              href="https://github.com/victorh3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github
+                size={20}
+                className="hover:text-pink-500 cursor-pointer transition-colors"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/victor-hu-sam-64690493"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin
+                size={20}
+                className="hover:text-cyan-400 cursor-pointer transition-colors"
+              />
+            </a>
           </div>
         </nav>
 
@@ -66,7 +78,7 @@ export default function Portfolio() {
             transition={{ delay: 0.2 }}
             className="text-slate-500 dark:text-slate-400 text-lg md:text-xl max-w-2xl"
           >
-            Software Developer focused on high-performance web solutions and
+            Software Engineer focused on high-performance web solutions and
             clean, scalable code.
           </motion.p>
           <motion.button
